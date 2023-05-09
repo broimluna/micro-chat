@@ -1,6 +1,19 @@
 
 > Open this page at [https://broimluna.github.io/micro-chat/](https://broimluna.github.io/micro-chat/)
 
+## micro:chat usage
+
+Upon startup, an image will be displayed.
+Message has to be edited thru the micro:bit editor or your IDE.
+A = Sends the message
+B = Screensaver mode
+A+B = Debug mode, tests the screen and lights.
+
+## Specifications
+
+micro:chat recomends having a micro:bit with a light plugged into it and batteries, however micro:chat will still work without batteries nor lights.
+
+
 ## Use as Extension
 
 This repository can be added as an **extension** in MakeCode.
@@ -30,6 +43,4 @@ This image may take a few minutes to refresh.
 * for PXT/microbit
 <script src="https://makecode.com/gh-pages-embed.js"></script><script>makeCodeRender("{{ site.makecode.home_url }}", "{{ site.github.owner_name }}/{{ site.github.repository_name }}");</script>
 
-## Recommended specs
 
-micro:chat recomends having a micro:bit with a light plugged into it and batteries, tho micro:chat is usable without it.
