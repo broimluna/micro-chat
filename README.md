@@ -4,9 +4,14 @@
 ## micro:chat usage
 
 Upon startup, an image will be displayed.
+<br>
+<br>
 Message has to be edited thru the micro:bit editor or your IDE.
+<br>
 A = Sends the message
+<br>
 B = Screensaver mode
+<br>
 A+B = Debug mode, tests the screen and lights.
 
 ## Specifications
