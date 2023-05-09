@@ -1,9 +1,17 @@
 input.onButtonPressed(Button.A, function () {
-    radio.sendString("assbrat")
+    radio.sendString("micro:chat")
     pins.digitalWritePin(DigitalPin.P0, 1)
+    basic.showLeds(`
+        . . . . .
+        . . . . #
+        . . . # .
+        # . # . .
+        . # . . .
+        `)
     basic.pause(1000)
     pins.digitalWritePin(DigitalPin.P0, 0)
     basic.pause(1000)
+    basic.clearScreen()
 })
 input.onButtonPressed(Button.AB, function () {
     radio.setGroup(1)
@@ -36,8 +44,16 @@ input.onButtonPressed(Button.AB, function () {
 radio.onReceivedString(function (receivedString) {
     for (let index = 0; index < 4; index++) {
         pins.digitalWritePin(DigitalPin.P0, 1)
+        basic.showLeds(`
+            . . # . .
+            . . # . .
+            . . # . .
+            . . . . .
+            . . # . .
+            `)
         basic.pause(500)
         pins.digitalWritePin(DigitalPin.P0, 0)
+        basic.clearScreen()
         basic.pause(500)
     }
     basic.showString(receivedString)
