@@ -9,7 +9,16 @@ input.onButtonPressed(Button.AB, function () {
     radio.setGroup(1)
     for (let index = 0; index < 4; index++) {
         pins.digitalWritePin(DigitalPin.P0, 1)
-        basic.showIcon(IconNames.Square)
+        basic.showLeds(`
+            # # # # #
+            # # # # #
+            # # # # #
+            # # # # #
+            # # # # #
+            `)
+        basic.pause(500)
+        pins.digitalWritePin(DigitalPin.P0, 0)
+        basic.clearScreen()
         basic.pause(500)
     }
     pins.digitalWritePin(DigitalPin.P0, 1)
@@ -33,7 +42,20 @@ radio.onReceivedString(function (receivedString) {
     }
     basic.showString(receivedString)
 })
-radio.setGroup(1)
-basic.forever(function () {
-	
+input.onButtonPressed(Button.B, function () {
+    basic.clearScreen()
+    for (let index = 0; index < 9999999999; index++) {
+        basic.showIcon(IconNames.Target)
+        basic.pause(500)
+        basic.showIcon(IconNames.Diamond)
+        basic.pause(500)
+    }
 })
+radio.setGroup(1)
+basic.showLeds(`
+    # # # # #
+    # . # . .
+    # # # . .
+    # . # . .
+    # # # # #
+    `)
