@@ -58,9 +58,9 @@ radio.onReceivedString(function (receivedString) {
     }
     basic.showString(receivedString)
 })
-input.onButtonPressed(Button.B, function () {
+input.onPinPressed(TouchPin.P1, function () {
     basic.clearScreen()
-    for (let index = 0; index < 9999999999; index++) {
+    for (let index = 0; index < 5; index++) {
         basic.showIcon(IconNames.Target)
         basic.pause(500)
         basic.showIcon(IconNames.Diamond)
